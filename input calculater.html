@@ -1,0 +1,90 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <style>
+    * {
+       font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    #di {
+        width: 50vh;
+        height: 70vh;
+        display: grid;
+        place-items: center;
+        
+        border: 2px solid black;
+        padding: 30;
+       
+        border-radius: 10px 10px 10px 10px;
+        background-color:azure ;
+        
+       
+    }
+    .container{
+      display: flex;
+      justify-content: center;
+      margin-top: 50px;
+    }
+    input::-webkit-inner-spin-button,
+    input::-webkit-outer-spin-button{
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    input[type='number']{
+      -moz-appearance: textfield;
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+     <div id="di">
+    <header id="cal"> <b>calculater</b> </header><br>
+    first number <br> 
+    <input id="1" placeholder="0"  type="number"> <br><br>
+    second number <br>
+    <input id="2" type="number" placeholder="0"> <br><br>
+    <div id="build">
+        <button id="sum" >+</button>
+        <button id="sub" >-</button>
+        <button id="into">x</button>
+        <button id="divide">/</button>
+
+    </div><br>
+    Answer <br>
+    <input id="ans" type="number" placeholder="0" readonly>
+
+    <button onclick="window.location.reload()"> Refresh</button>
+
+  </div>
+
+    <script>
+       let num1 = document.getElementById("1");
+       let num2 = document.getElementById("2");
+      let ans =   document.getElementById('ans');
+
+       document.getElementById('sum').addEventListener("click",function() {
+          ans.value  = parseInt(num1.value)+ parseInt(num2.value)});
+          document.getElementById('sub').addEventListener("click",function() {
+          ans.value  = parseInt(num1.value)-(num2.value)});
+          document.getElementById('into').addEventListener("click",function() {
+          ans.value  = parseInt(num1.value)*(num2.value)});
+          document.getElementById('divide').addEventListener("click",function() {
+          ans.value  = parseInt(num1.value)/(num2.value)});
+       
+
+
+      
+
+    </script>
+
+
+
+
+
+</div>
+</body>
+</html>
